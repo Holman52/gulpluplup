@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Poppins', sans-serif;
+  src: url(../../../src/fonts/Poppins-Regular.ttf);
+}
+
 :root{
 
   /**  Отступы  */
@@ -14,5 +19,5 @@
   --main-color: #e3e3e3;
 
   /**  Шрифты */
-  --font-family-title: "Open Sans";
+  --font-family-title: 'Poppins', sans-serif;
 }

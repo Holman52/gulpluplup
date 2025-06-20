@@ -30,7 +30,7 @@ const paths = {
     dest: 'dist/assets/',
   },
   images: {
-    src: 'src/images/**/*',
+    src: 'src/images/**/*{.jpeg,.jpg,.png}',
     dest: 'dist/assets/images',
   }
 };
@@ -53,6 +53,11 @@ export const html = () =>
     )
     .pipe(gulp.dest(paths.html.dest))
     .pipe(bs.stream());
+
+function fonts() {
+  return gulp.src('src/fonts/**/*.{woff,woff2}')
+    .pipe(gulp.dest('dist/fonts/'));
+}
 
 export const styles = () =>
   gulp
@@ -81,7 +86,7 @@ const imagesToMobileWebp = () =>
 
 // Копирование ассетов
 export const assets = () =>
-  gulp.src(paths.assets.src).pipe(gulp.dest(paths.assets.dest));
+  gulp.src(paths.assets.src, {encoding:false}).pipe(gulp.dest(paths.assets.dest) );
 
 // Очистка
 export const clean = () => deleteAsync(['dist']);
@@ -104,6 +109,6 @@ export const serve = () => {
   gulp.watch(paths.images.src, imagesToMobileWebp);
 };
 
-// Сборка
-export const build = gulp.series(clean, gulp.parallel(styles, html, assets, imagesToWebp, imagesToMobileWebp));
+
+export const build = gulp.series(clean, gulp.parallel(styles, html, fonts, assets, imagesToWebp, imagesToMobileWebp));
 export default gulp.series(build, serve);
