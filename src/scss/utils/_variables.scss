@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Poppins', sans-serif;
   src: url(../../../src/fonts/Poppins-Regular.ttf);
-}
+};
 
 :root{
 
@@ -22,6 +22,9 @@
   --main-black-text: #333333;
   --main-nav-black-text: #FFFFFF;
   --main-desc-card-black-text:  #bfaaaa;
+  --btn-color-white: #ffffff;
+  --btn-color-black: #000000;
+
   /**  Шрифты */
   --font-family-title: 'Poppins', sans-serif;
 }

@@ -7,15 +7,16 @@
 @use 'base/layout';
 
 // ==== 3. Layout ====
-@use 'layout/container';
+@use 'layout/navigation';
+@use 'layout/index/content-main';
 
 // ==== 4. Components ====
 @use 'components/button';
-@use 'components/navigation';
 
 body {
   background-color: var(--main-color);
   font-family: var(--font-family-title);
+  font-style: normal;
 }
 .container{
   display: flex;

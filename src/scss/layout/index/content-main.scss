@@ -1,0 +1,54 @@
+@use 'utils/variables';
+.content{
+    width: 100%;
+    &__sectionDesc{
+        background-image: url('/assets/content-desc.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+      .block-desk{
+            width: 35%;
+            background-color: #FFF3E3;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin: 5% 5% 0 0;
+            padding: 4%;
+            &__notification{
+                font-weight: 600;
+                font-weight: 600;
+                font-size: 16px;
+                letter-spacing: 3px;
+            }
+            &__header{
+                font-weight: 700;
+                font-size: 3.5rem;
+                line-height: 65px;
+                width: 90%;
+                letter-spacing: 0px;
+                color: #B88E2F;
+            }
+            &__title{
+                margin: 4% 0 12%;
+                font-size: 1.125rem;
+            }
+            .btn-sectionDesk{
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 0px;
+                text-transform: uppercase;
+                padding: 5%;
+                text-align: center;
+                background-color:#B88E2F;
+                border: none;
+                width: 50%;
+                color: var(--btn-color-white);
+            }
+        }
+}
