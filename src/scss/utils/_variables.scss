@@ -16,8 +16,12 @@
   --border-radius-default: 20px;
 
   /**  Основные цвета */
-  --main-color: #e3e3e3;
-
+  --main-text: #3A3A3A;
+  --main-nav-text: rgb(0, 0, 0);
+  --main-desc-card-text: #898989;
+  --main-black-text: #333333;
+  --main-nav-black-text: #FFFFFF;
+  --main-desc-card-black-text:  #bfaaaa;
   /**  Шрифты */
   --font-family-title: 'Poppins', sans-serif;
 }

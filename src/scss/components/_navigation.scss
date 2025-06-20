@@ -1,0 +1,29 @@
+@use 'utils/variables';
+
+.navigation{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-weight: 500;
+    align-items: center;
+    &__menu{
+        display: flex;
+        width: 40%;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        list-style: none;
+    }
+    &__icons{
+        display: flex;
+        width: 20%;
+        justify-content: space-between;
+        gap: var(--gap-xl);
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+  .navigation{
+    font-size: 1.5rem;
+  }
+}
