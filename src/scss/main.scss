@@ -12,13 +12,14 @@
 
 // ==== 4. Components ====
 @use 'components/button';
-
+@use 'components/card';
 body {
   background-color: var(--main-color);
   font-family: var(--font-family-title);
   font-style: normal;
 }
 .container{
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;

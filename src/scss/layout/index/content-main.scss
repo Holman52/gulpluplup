@@ -2,7 +2,7 @@
 .content{
     width: 100%;
     &__sectionDesc{
-        background-image: url('/assets/content-desc.png');
+        background-image: url('/assets/content-desc.webp');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -51,4 +51,82 @@
                 color: var(--btn-color-white);
             }
         }
+        &__assortment{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            color: var(--main-black-text);
+            &-header{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: var(--gap-l);
+                margin: 4% 0 6% 0;
+                &__title{
+                    font-weight: 700;
+                    font-size: 2rem;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+                }
+                &__text{
+                    font-weight: 400;
+                    color: var(--text-for-header);
+                    font-size: 1.25rem;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+                    text-align: center;
+                }
+            }
+            &-cards{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--gap-l);
+                &-card{
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    line-height: 100%;
+                    letter-spacing: 0px;
+                    &__title{
+                        text-align: center;
+                        margin-top: 7%;
+                    }
+                }
+            }
+
+        }
+        &__product{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            &-header{
+                text-align: center;
+                font-weight: 700;
+                font-size: 2.5rem;
+                line-height: 120%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: var(--main-black-text);
+                margin: 4% 0 3% 0 
+            }
+            &-cards{
+                width: 98%;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--gap-xl);
+            }
+        }
+            
+        
 }
+
+// @media screen and (min-width: 1440px) {
+//   .content__product-cards{
+//     width: 1240px;
+//   }
+// }

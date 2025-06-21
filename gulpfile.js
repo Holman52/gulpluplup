@@ -26,7 +26,8 @@ const paths = {
     watch: 'src/scss/**/*.scss',
   },
   assets: {
-    src: 'src/assets/**/*',
+    src: 'src/assets/**/*{.svg}',
+    img:'src/assets/**/*{.jpeg,.jpg,.png}',
     dest: 'dist/assets/',
   },
   images: {
@@ -73,12 +74,16 @@ const imagesToWebp = () =>
     .pipe(newer(paths.images.dest))
     .pipe(webp({ quality: 80 }))
     .pipe(gulp.dest(paths.images.dest))
+  gulp.src(paths.assets.img, { encoding: false })
+    .pipe(newer(paths.assets.dest))
+    .pipe(webp({ quality: 80 }))
+    .pipe(gulp.dest(paths.assets.dest))
 
 const imagesToMobileWebp = () =>
   gulp.src(paths.images.src, { encoding: false })
     .pipe(responsive({
       formats: [
-        { width: 640, rename: { suffix: "-sm" }, format: 'webp' },
+        { width: 400, rename: { suffix: "-sm" }, format: 'webp' },
         { width: 1024, rename: { suffix: "-lg" }, format: 'webp' },
       ]
     }))

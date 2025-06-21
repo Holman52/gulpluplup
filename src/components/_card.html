@@ -1,4 +1,4 @@
-<div class="card">
+<!-- <div class="card">
     <picture >
         <source srcset="@@img-sm.webp" media="(max-width: 480px)">
         <source srcset="@@img-lg.webp" media="(max-width: 800px)">
@@ -7,5 +7,23 @@
     <div class="card__body">
         <h3 class="card__title">@@title</h3>
         <p class="card__text">@@text</p>
+    </div>
+</div> -->
+
+<div class="card">
+    <picture >
+        <source srcset="@@img-sm.webp" media="(min-width: 1440px)">
+        <img src="@@img.webp" alt="@@alt" class="card__image">
+          <div class="card__sale" style="background-color: @@back; display:@@display">
+        @@total
+        </div>
+    </picture>
+    <div class="card__body">
+        <h3 class="card__body-title">@@title</h3>
+        <p class="card__body-text">@@text</p>
+        <div class="card__body-flex" >
+            <div class="card__body-flex-price">@@price</div>
+            <div class="card__body-flex-sale">@@sale</div>
+        </div>
     </div>
 </div>

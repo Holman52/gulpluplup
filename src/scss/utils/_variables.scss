@@ -6,9 +6,9 @@
 :root{
 
   /**  Отступы  */
-  --gap-xl: 20px;
+  --gap-xl: 25px;
   --gap-l: 15px;
-
+  --background-card: #F4F5F7;
   --padding-block: 20px;
   --padding-inline: 20px;
 
@@ -24,6 +24,7 @@
   --main-desc-card-black-text:  #bfaaaa;
   --btn-color-white: #ffffff;
   --btn-color-black: #000000;
+  --text-for-header:#666666;
 
   /**  Шрифты */
   --font-family-title: 'Poppins', sans-serif;
