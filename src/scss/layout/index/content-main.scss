@@ -120,6 +120,19 @@
                 justify-content: center;
                 gap: var(--gap-xl);
             }
+            &-btn{
+            padding: var(--padding-inline);
+            width: 20%;
+            font-size: 1rem;  
+            color: #B88E2F;
+            background: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            line-height: 150%;
+            letter-spacing: 0%;
+            border: #B88E2F 2px solid;
+            margin: 5% 0 10% 0;
+            }
         }
             
         

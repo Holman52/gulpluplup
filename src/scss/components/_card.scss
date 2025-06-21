@@ -6,7 +6,14 @@
   flex-direction: column;
   justify-content: flex-start;
   background-color: var(--background-card);
-  &__sale{
+  overflow: hidden;
+  transition: all 0.4s ease;
+  
+  &__image {
+    transition: transform 0.3s ease;
+  }
+  
+  &__sale {
     position: absolute;
     width: 48px;
     height: 48px;
@@ -19,44 +26,151 @@
     z-index: 10;
     border-radius: 100%;
     font-weight: 500;
-
     letter-spacing: 0%;
-    color: var( --main-nav-black-text);
+    color: var(--main-nav-black-text);
   }
-  &__body{
+  
+  &__body {
     padding: 2% 5% 5% 5%;
-    &-title{
+    
+    &-title {
       font-weight: 600;
       font-size: 1.5rem;
       letter-spacing: 0%;
       color: var(--main-black-text);
       margin: 0;
     }
-    &-text{
+    
+    &-text {
       color: var(--main-desc-card-text);
       font-weight: 500;
-
       letter-spacing: 0%;
     }
-    &-flex{
+    
+    &-flex {
       display: flex;
       justify-content: space-between;
-      &-price{
+      
+      &-price {
         color: var(--main-black-text);
         font-weight: 600;
         font-size: 1.25rem;
         line-height: 150%;
         letter-spacing: 0%;
       }
-      &-sale{
+      
+      &-sale {
         color: var(--main-desc-card-text);
         font-weight: 400;
         line-height: 150%;
         letter-spacing: 0%;
         text-decoration: line-through;
-
       }
     }
+  }
+  
+  &:hover .card__image {
+    transform: scale(1.03);
+  }
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1;
+  }
+  
+  &:hover::before {
+    opacity: 1;
+  }
+  
+  &__add-to-cart {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-xl);
+    width: 100%;
+    justify-content: center;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 20px) scale(0.9);
+    opacity: 0;
+    z-index: 2;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+    // Псевдоэлемент для тени
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      width: 80%;
+      height: 20px;
+      // background: radial-gradient(ellipse at center, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0) 80%);
+      transform: translateX(-50%) scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.3s ease-out;
+      opacity: 0;
+      z-index: -1;
+    }
+    
+    // Анимация при появлении
+    .card:hover & {
+      opacity: 1;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(1);
+      &::after {
+        transform: translateX(-50%) scaleY(1);
+        opacity: 1;
+        transition-delay: 0.1s; // Небольшая задержка для тени
+      }
+    }
+    
+    &:hover {
+      transform: translate(-50%, -50%) scale(1.05);
 
+      
+      &::after {
+        transform: translateX(-50%) scaleY(1.2);
+        opacity: 0.8;
+      }
+    }
+    &__btn{
+      padding: var(--padding-block);
+      color: #B88E2F;
+      background: #FFFF;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0%;
+      border: none
+    }
+    &__desc{
+      width: 80%;
+      font-weight: 600;
+      line-height: 150%;
+      letter-spacing: 0%;
+      font-size: 1.25rem;
+      color: var(--white-theme);
+      display: flex;
+      justify-content: space-between;
+      &-block{
+        display: flex;
+        gap: 5px;
+        align-items: center;
+        justify-content: center;
+      }
+    }
   }
 }
