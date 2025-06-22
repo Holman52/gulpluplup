@@ -8,11 +8,12 @@
 
 // ==== 3. Layout ====
 @use 'layout/navigation';
+@use 'layout/footer';
 @use 'layout/index/content-main';
 
 // ==== 4. Components ====
-@use 'components/button';
 @use 'components/card';
+
 body {
   background-color: var(--main-color);
   font-family: var(--font-family-title);

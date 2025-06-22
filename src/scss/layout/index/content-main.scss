@@ -1,6 +1,10 @@
 @use 'utils/variables';
 .content{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     &__sectionDesc{
         background-image: url('/assets/content-desc.webp');
         background-size: cover;
@@ -134,8 +138,151 @@
             margin: 5% 0 10% 0;
             }
         }
-            
-        
+    &__rooms{
+        display: flex;
+        gap: (--gap-xl);
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        &-desc{
+            display: flex;
+            justify-content: flex-start;
+            gap: var(--gap-l);
+            flex-direction: column;
+            width: 30%;
+            &__title{
+                font-weight: 700;
+                font-size: 2.5rem;
+                line-height: 120%;
+                letter-spacing: 0%;
+                color: (--main-text);
+            }
+            &__text{
+                font-weight: 500;
+                line-height: 150%;
+                letter-spacing: 0%;
+                color: var(--text-for-header);
+            }
+            &__btn{
+                padding: var(--padding-inline);
+                color: #ffffff;
+                background:  #B88E2F;
+                font-size: 1.2rem;
+                font-weight: 600;
+                line-height: 150%;
+                letter-spacing: 0%;
+                border: none;
+                width:45%
+            }
+
+        }
+        &-scroll{
+           display: grid; 
+            grid-template-rows: auto 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+            gap: 3px;
+            width: 70%;
+
+            &__img1 { 
+                background-image: url('../../../assets/rooms1.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 404px;
+                height: 582px;
+                background-color: #E5EB79; 
+                grid-row-start: 1;
+                grid-column-start: 1;
+                grid-row-end: 4;
+                grid-column-end: 3;
+            }
+            &__img2 { 
+                background-color: #595AD7; 
+                grid-row-start: 1;
+                grid-column-start: 3;
+                grid-row-end: 3;
+                grid-column-end: 5;;
+    
+                background-image: url('../../../assets/rooms2.webp');
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+            &__img3 {
+            background-color: #EAA9B7; 
+            background-image: url('../../../assets/rooms3.webp');
+             background-size: contain;
+            background-repeat: no-repeat;
+
+            grid-row-start: 1;
+            grid-column-start: 5;
+            grid-row-end: 3;
+            grid-column-end: 7;
+            }
+            &__btn {   
+               background-color: #7B7F57; 
+            grid-row-start: 3;
+            grid-column-start: 3;
+
+            grid-row-end: 4;
+            grid-column-end: 4;
+            }
+                }
+    }   
+}
+
+
+
+
+
+.angry-grid {
+   display: grid; 
+
+   grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
+   grid-template-columns:  1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+   
+   gap: 3px;
+   height: 100%;
+   
+}
+  
+#item-0 {
+
+   background-color: #E5EB79; 
+   grid-row-start: 1;
+   grid-column-start: 1;
+
+   grid-row-end: 7;
+   grid-column-end: 5;
+   
+}
+#item-1 {
+
+   background-color: #595AD7; 
+   grid-row-start: 6;
+   grid-column-start: 5;
+
+   grid-row-end: 7;
+   grid-column-end: 8;
+   
+}
+#item-2 {
+
+   background-color: #EAA9B7; 
+   grid-row-start: 1;
+   grid-column-start: 5;
+
+   grid-row-end: 6;
+   grid-column-end: 9;
+   
+}
+#item-3 {
+
+   background-color: #CD69CF; 
+   grid-row-start: 1;
+   grid-column-start: 9;
+
+   grid-row-end: 6;
+   grid-column-end: 13;
+   
 }
 
 // @media screen and (min-width: 1440px) {
