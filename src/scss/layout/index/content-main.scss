@@ -277,6 +277,78 @@
             justify-content: center;
         }
     }   
+    &__photos{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 8%;
+        align-items: center;
+        justify-content: center;
+        &-desc{
+        
+            &__title{
+                font-weight: 700;
+                font-size: 2.5rem;
+                line-height: 120%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: var(--main-text);
+            }
+            &__text{
+                font-weight: 600;
+                font-size: 1.25rem;
+                line-height: 150%;
+                letter-spacing: 0%;
+                text-align: center;
+                color: var(--text-for-header);
+
+            }
+        }
+        &-scroll{
+            display: grid;
+            width: 100%;
+    
+            grid-template-columns: 25% auto auto auto auto;
+            grid-template-rows: repeat(2, 1fr);
+            align-items: center;
+            justify-content: center;
+            grid-auto-rows: minmax(0, auto);
+            grid-auto-columns: minmax(0, auto);
+            gap: var(--gap-xl);
+            &-flex{
+                display: flex;
+                gap: var(--gap-l);
+            }
+            &-grid1{
+                grid-area: 1 / 1 / 2 / 3;            }
+             &-grid2{
+                grid-area: 2 / 1 / 3 / 3;
+                align-self: start
+            }
+             &-grid3{
+                grid-area: 1 / 3 / 3 / 4;
+            }
+             &-grid4{
+                grid-area: 1 / 4 / 2 / 6;
+                align-self: start
+            }
+             &-grid5{
+                grid-area: 2 / 4 / 3 / 6;
+                align-self: start
+            }
+            .end-self{
+                display: block;
+                object-fit: contain;
+                align-self: end 
+            }
+            .end-start{
+                display: block;
+                object-fit: contain;
+                align-self: start;
+            }
+          
+        }
+    }
 }
 .active{
     background-color: #B88E2F;
