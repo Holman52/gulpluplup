@@ -1,0 +1,37 @@
+@use 'utils/variables';
+.rezult{
+    width: 92%;
+    background: #FAF3EA;
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(-gap-l);
+    margin: 8% 0 5% 0;
+    &__block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        &-desc{
+            display: flex;
+            flex-direction: column;
+            justify-content:flex-start;
+            // align-items: center;
+            &__title{
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 150%;
+                letter-spacing: 0%;
+                color: var(--shop-rezult-title);
+            }
+            &__text{
+                font-weight: 500;
+                font-size: 1.25rem;
+                line-height: 150%;
+                letter-spacing: 0%;
+                color: var(--text-for-header);
+            }
+        }
+    }
+}

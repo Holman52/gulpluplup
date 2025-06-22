@@ -1,0 +1,33 @@
+@use 'utils/variables';
+
+.header{
+    background-image: url('/assets/header.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--gap-l);
+    padding: 5% 0 5% 0;
+    &__text{
+        font-weight: 500;
+        font-size: 3rem;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+     &__desc-title{
+            font-weight: 500;
+            font-size: 1rem;
+            line-height: 100%;
+            letter-spacing: 0%;
+        }
+    &__desc-text{
+        font-size: 1rem;
+        font-weight: 300;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+}

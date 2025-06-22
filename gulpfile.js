@@ -21,7 +21,7 @@ const paths = {
     watch: ['src/pages/**/*.html', 'src/components/**/*.html'],
   },
   styles: {
-    src: 'src/scss/main.scss',
+    src: 'src/scss/*.scss',
     dest: 'dist/assets/css/',
     watch: 'src/scss/**/*.scss',
   },
