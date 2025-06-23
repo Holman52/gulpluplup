@@ -1,0 +1,17 @@
+@use 'utils/variables';
+.path{
+    background-color: #F9F1E7;
+    width: 100%;
+    &__desc{
+        display: flex;
+        padding: 2% 2% 2% 5%;
+        gap: var(--gap-xl);
+        color: var(--main-nav-text);
+        &-pages{
+            color: #9F9F9F;
+        }
+        &-symbol{
+            font-weight: 600;
+        }
+    }
+}

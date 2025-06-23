@@ -83,6 +83,7 @@ const imagesToMobileWebp = () =>
   gulp.src(paths.images.src, { encoding: false })
     .pipe(responsive({
       formats: [
+        { width: 300, rename: { suffix: "-vm" }, format: 'webp' },
         { width: 400, rename: { suffix: "-sm" }, format: 'webp' },
         { width: 1024, rename: { suffix: "-lg" }, format: 'webp' },
       ]

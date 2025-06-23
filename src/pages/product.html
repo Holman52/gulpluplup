@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/product.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+@@include('../components/index/_navigation.html',{})
+@@include('../components/_path-card.html', { })
+@@include('../components/product/_content-product.html', { 
+    "img-picture1": "./assets/sofa2",
+    "img-picture2": "./assets/sofa1",
+    "img-picture3": "./assets/sofa3",
+    "img-picture4": "./assets/sofa4",
+    "img":"./assets/images/sofa",
+    "alt": "1",
+    "title": "Asgaard sofa",
+    "price": "Rs. 250,000.00",
+    "rate": "./assets/rate",
+    "text-desc":"Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound.",
+})
+@@include('../components/_footer.html', { })
+</div>
+</body>
+</html>

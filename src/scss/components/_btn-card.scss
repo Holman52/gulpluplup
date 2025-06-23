@@ -1,0 +1,15 @@
+@use 'utils/variables';
+.btn-card{
+    // padding: var(--padding-block)
+    padding: 4% 7% 4% 7%;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 15px;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+@media screen and (min-width:769px) and (max-width:1100px){
+    .btn-card{
+        padding: 2%;
+    }
+}

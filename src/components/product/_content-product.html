@@ -1,0 +1,70 @@
+<div class="content">
+    <div class="content__pictures">
+        <img src="@@img-picture2.webp" alt="@@alt">
+        <img src="@@img-picture3.webp" alt="@@alt">
+        <img src="@@img-picture1.webp" alt="@@alt">
+        <img src="@@img-picture4.webp" alt="@@alt">
+    </div>
+    <div class="content__img">
+        <picture>
+             <source srcset="@@img.webp" media="(min-width: 1400px) ">
+             <!-- <source srcset="@@img-vm.webp" media="(max-width: 500px)">
+               -->
+            <img src="@@img.webp" alt="@@alt" class="card__image">
+        </picture>
+    </div>
+    <div class="content__desc">
+        <div class="content__desc-text">
+           <div class="content__desc-text__title">@@title</div>
+           <div class="content__desc-text-price">@@price</div>
+            <div class="content__desc-text__rate">
+      
+                <img src="@@rate.webp" alt="@@rate">
+                <svg width="2" height="37" viewBox="0 0 2 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <line x1="1" x2="1" y2="37" stroke="#9F9F9F" stroke-width="2"/>
+                </svg>
+                <div class="content__desc-text__rate-title">5 Customer Review</div>
+            </div>
+            <div class="content__desc-text__opis">
+                @@text-desc
+            </div>
+            <div class="content__desc-text__size">
+                <div class="content__desc-text__size-title">Size</div>
+                <div class="content__desc-text__size-flex">
+                    <button type="submit" class="btn-size active">L</button>
+                    <button type="submit" class="btn-size">XL</button>
+                    <button type="submit" class="btn-size">XS</button>
+                </div>
+            </div>
+           <div class="content__desc-text__color">
+                <div class="content__desc-text__color-title">Color</div>
+                <div class="content__desc-text__color-flex">
+                    <div class="btn-color1 color"></div>
+                    <div class="btn-color2 color"></div>
+                    <div class="btn-color3 color"></div>
+                </div>  
+           </div>
+           <div class="content__desc-text__cart">
+                <div class="content__desc-text__cart-block">
+                    <div class="content__desc-text__cart-block-decremnt">-</div>
+                        <input class="content__cart-block__input" type="text" placeholder="1"  value="1">
+                    <div class="content__desc-text__cart-block-increment">+</div>
+                </div>
+                @@include('../components/_btn-card.html',{
+                    "title":"Add To Cart"
+                })
+                @@include('../components/_btn-card.html',{
+                    "title":"+  Compare"
+                })
+           </div>
+           <div class="content__desc-line"></div>
+           <div class="content__desc-foter">
+
+           </div> 
+        </div>
+
+
+        <div></div>
+        <div></div>
+    </div>
+</div>

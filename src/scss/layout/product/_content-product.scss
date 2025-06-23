@@ -1,0 +1,164 @@
+@use 'utils/variables';
+.content{
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    // gap: 5px;
+    &__pictures{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: var(--gap-xl);
+    }
+    &__desc{
+        &-text{
+            display: flex;
+            justify-content: flex-start;
+            gap: var(--gap-l);
+            flex-direction: column;
+            &__title{
+                font-weight: 400;
+                font-size: 2.625rem;
+                line-height: 100%;
+                letter-spacing: 0%;
+            }
+            &-price{
+                font-weight: 500;
+                font-size: 1.5rem;
+                line-height: 100%;
+                color:  var(--text-color-card);
+                letter-spacing: 0%;
+            }
+            &__rate{
+                display: flex;
+                align-items: center;
+                gap: var(--gap-l);
+                font-weight: 400;
+                font-size: 0.81rem;
+                color:  var(--text-color-card);
+            }
+
+            &__opis{
+                width: 60%;
+                font-weight: 400;
+                font-size: 0.81rem;
+                line-height: 150%;
+                letter-spacing: 0%;
+            }
+            &__size{
+                
+                &-title{
+                    font-weight: 400;
+                    font-size: 0.87rem;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color:  var(--text-color-card);
+                    margin-bottom: 10px;
+                }
+                &-flex{
+                    display: flex;
+                    gap: var(--gap-l);
+                }
+            }
+            &__color{
+                 &-title{
+                    font-weight: 400;
+                    font-size: 0.87rem;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color:  var(--text-color-card);
+                    margin-bottom: 10px;
+                }
+                &-flex{
+                    display: flex;
+                    gap: var(--gap-l);
+                }
+            }
+            &__cart{
+                display: flex;
+                gap: var(--gap-l);
+                align-items: center;
+                // justify-content: space-between;
+                &-block{
+                    // width: 124px;
+                    border: 1px solid #9F9F9F;
+                    padding: 4%;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+                    input{
+                        text-align: center;
+                        font-weight: 500;
+                        min-width: 20px;
+                        max-width: 40px;
+                        width: 5%;
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+.btn-size{
+    background-color: #F9F1E7;
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 0.82rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+}
+.active{
+    background-color:#B88E2F;
+    color: white;
+}
+.btn-color1{
+    background-color: #816DFA;
+}
+.btn-color2{
+    background-color: #000000;
+}
+.btn-color3{
+    background-color: #B88E2F;
+}
+.color{
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+
+}
+@media screen and (max-width:768px) {
+    .content{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        &__pictures{
+            justify-content: center;
+            flex-direction: row;
+            gap: var(--gap-l);
+        }
+        &__desc{
+            &-text{
+                justify-content: center;
+            }
+        }
+    }
+    
+}
+@media screen and (min-width:769px) and (max-width:1100px){
+    .content__desc-text__opis{
+        width: 100%;
+    }
+    .content__desc-text__cart{
+
+    }
+    .content__desc-text__cart-block{
+        padding: 2%;
+    }
+}
