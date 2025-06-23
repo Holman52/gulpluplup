@@ -1,0 +1,71 @@
+@use 'utils/variables';
+
+.contentShop{
+    width: 100%;
+    background: #FAF3EA;
+    padding: 2%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(-gap-l);
+    &__icons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-items{
+            display: flex;
+            gap: var(--gap-xl);
+            justify-content: center;
+            align-items: center;
+            &__block{
+                display: flex;
+                gap: var(--gap-l);
+                align-items: center;
+                justify-content: center;
+                &-title{
+                    font-weight: 400;
+                    font-size: 1.25rem;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                }
+            }
+        }
+    }
+    &__indicators{
+        display: flex;
+        gap: var(--gap-xl);
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 1.25rem;
+        line-height: 100%;
+        letter-spacing: 0%;
+        &-block{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--gap-l);
+            &__input{
+                border: none;
+                padding: var(--padding-inline);
+                font-size: 1.25rem;
+                height: 55px;
+            }
+            .num{
+                width: 55px;
+
+            }
+            .txt{
+                width: 188px;
+            }
+        }
+    }
+    &__card{
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        gap: var(--gap-xl);
+        flex-wrap: wrap;
+        margin-top: 5%;
+    }
+}

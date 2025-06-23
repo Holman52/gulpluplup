@@ -2,7 +2,7 @@
 @use 'utils/variables';
 
 // ==== 2. Base styles ====
-// @use 'base/reset';
+@use 'base/reset';
 // @use 'base/typography';
 // @use 'base/layout';
 
@@ -11,6 +11,7 @@
 @use 'layout/footer';
 @use 'layout/header';
 @use 'layout/best-footer';
+@use 'layout/shop/content-shop';
 
 // ==== 4. Components ====
 @use 'components/card';
