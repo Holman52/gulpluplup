@@ -1,6 +1,7 @@
 @use 'utils/variables';
 .btn-card{
     // padding: var(--padding-block)
+    min-width: 180px;
     padding: 4% 7% 4% 7%;
     background-color: transparent;
     border: 1px solid black;

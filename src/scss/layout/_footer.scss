@@ -52,16 +52,17 @@
                     border: none;
                     padding-bottom: 3px;
                     border-bottom: 1px solid var(--main-nav-text);
+                    font-size: 1rem;
                 }
                 &-btn{
                     color: var(--main-nav-text);
                     background-color: transparent;
                     border: none;
-                    font-family: Poppins;
                     font-weight: 500;
                     line-height: 100%;
                     letter-spacing: 0%;
                     border-bottom: 1px solid var(--main-nav-text);
+                                font-size: 1rem;
                 }
             }
         }
