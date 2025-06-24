@@ -1,7 +1,7 @@
 import gulp from 'gulp';
 import fileInclude from 'gulp-file-include';
 import { deleteAsync } from 'del';
-import  * as dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import autoprefixer from 'gulp-autoprefixer';
@@ -10,6 +10,7 @@ import browserSync from 'browser-sync';
 import webp from 'gulp-webp';
 import responsive from 'gulp-sharp-responsive';
 import newer from "gulp-newer";
+import terser from 'gulp-terser'; // Добавляем минификатор JS
 
 const sass = gulpSass(dartSass);
 const bs = browserSync.create();
@@ -25,9 +26,14 @@ const paths = {
     dest: 'dist/assets/css/',
     watch: 'src/scss/**/*.scss',
   },
+  scripts: {
+    src: 'src/js/**/*.js',
+    dest: 'dist/assets/js/',
+    watch: 'src/js/**/*.js',
+  },
   assets: {
     src: 'src/assets/**/*{.svg}',
-    img:'src/assets/**/*{.jpeg,.jpg,.png}',
+    img: 'src/assets/**/*{.jpeg,.jpg,.png}',
     dest: 'dist/assets/',
   },
   images: {
@@ -36,13 +42,19 @@ const paths = {
   }
 };
 
+// Обработка JavaScript
+export const scripts = () =>
+  gulp.src(paths.scripts.src)
+    .pipe(terser()) // Минификация JS
+    .pipe(gulp.dest(paths.scripts.dest))
+    .pipe(bs.stream());
+
 export const html = () =>
   gulp
     .src(paths.html.src)
     .pipe(
       fileInclude({
         prefix: '@@',
-
         basepath: 'src/components/',
       })
     )
@@ -92,7 +104,7 @@ const imagesToMobileWebp = () =>
 
 // Копирование ассетов
 export const assets = () =>
-  gulp.src(paths.assets.src, {encoding:false}).pipe(gulp.dest(paths.assets.dest) );
+  gulp.src(paths.assets.src, {encoding:false}).pipe(gulp.dest(paths.assets.dest));
 
 // Очистка
 export const clean = () => deleteAsync(['dist']);
@@ -109,12 +121,25 @@ export const serve = () => {
   });
 
   gulp.watch(paths.styles.watch, styles);
+  gulp.watch(paths.scripts.watch, scripts); // Добавляем вотчер для JS
   gulp.watch(paths.html.watch, html);
   gulp.watch(paths.assets.src, assets);
   gulp.watch(paths.images.src, imagesToWebp);
   gulp.watch(paths.images.src, imagesToMobileWebp);
 };
 
+// Обновляем сборку, добавляя обработку JS
+export const build = gulp.series(
+  clean, 
+  gulp.parallel(
+    styles, 
+    html, 
+    fonts, 
+    assets, 
+    imagesToWebp, 
+    imagesToMobileWebp,
+    scripts // Добавляем задачу для JS
+  )
+);
 
-export const build = gulp.series(clean, gulp.parallel(styles, html, fonts, assets, imagesToWebp, imagesToMobileWebp));
 export default gulp.series(build, serve);

@@ -120,16 +120,73 @@
             <div class="info__block-desc__text">Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.</div>
             <div class="info__block-desc__text">Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.</div>
         </div>
-        <div>
+        <div class="info__block-img">
             <picture>
-                
-                <img src="" alt="">
+                <source srcset="./assets/images/sofa-big1-vm.webp" media="(max-width: 820px)">
+                <source srcset="./assets/images/sofa-big1-sm.webp" media="(min-width: 821px) and (max-width: 1220px)">
+                <img src="./assets/images/sofa-big1.webp" alt="1" class="card__image">
             </picture>
             <picture>
-
-                <img src="" alt="">
+                <source srcset="./assets/images/sofa-big-vm.webp" media="(max-width: 820px)">
+                <source srcset="/assets/images/sofa-big-sm.webp" media="(min-width: 821px) and (max-width: 1220px)">
+                <img src="./assets/images/sofa-big.webp" alt="1" class="card__image">
             </picture>
         </div>
+    </div>
+    <div class="line"></div>
+    <div class="info__product">
+        <div class="info__product-title">Related Products</div>
+        <div class="info__product-cards">
+             @@include('../components/_card.html', {
+            "img": "./assets/images/cardSyltherine",
+            "alt": "cardSyltherine",
+            "title": "Syltherine",
+            "text": "Stylish cafe chair",
+            "price": "Rp 2.500.000",
+            "sale": "Rp 3.500.000",
+            "back": "#E97171",
+            "total": "-30%",
+            "display": "flex",
+            "display-price": "flex",
+            })
+             @@include('../components/_card.html', {
+            "img": "./assets/images/cardLeviosa",
+            "alt": "cardLeviosa",
+            "title": "Leviosa",
+            "text": "Stylish cafe chair",
+            "price": "Rp 2.500.000",
+            "sale": "Rp 3.500.000",
+            "back": "#2EC1AC",
+            "total": "New",
+            "display": "none",
+            "display-price": "none",
+            })
+            @@include('../components/_card.html', {
+            "img": "./assets/images/cardLolito",
+            "alt": "cardLolito",
+            "title": "Lolito",
+            "text": "Luxury big sofar",
+            "price": "Rp 7.000.000",
+            "sale": "Rp 14.500.000",
+            "back": "#E97171",
+            "total": "-50%",
+            "display": "flex",
+            "display-price": "flex",
+            })
+            @@include('../components/_card.html', {
+            "img": "./assets/images/cardRespira",
+            "alt": "cardRespirae",
+            "title": "Respira",
+            "text": "Outdoor bar table and stool",
+            "price": "Rp 500.0000",
+            "sale": "Rp 3.500.000",
+            "back": "#2EC1AC",
+            "total": "New",
+            "display": "flex",
+            "display-price": "none",
+            })
+        </div>
+         @@include('../components/_button.html', {"title": "Snow More"})
     </div>
     <div class="line"></div>
 </section>

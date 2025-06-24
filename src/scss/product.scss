@@ -12,9 +12,10 @@
 @use 'layout/best-footer';
 @use 'layout/product/content-product';
 
+@use 'components/card';
 @use 'components/path-card';
 @use 'components/btn-card';
-
+@use 'components/button';
 
 
 body {
@@ -32,7 +33,7 @@ body {
   flex-direction: column;
 }
 
-@media screen and (min-width: 1440px){
+@media screen and (min-width: 1600px){
     body{
         font-size: 22px;
     }

@@ -172,9 +172,35 @@
             flex-direction: column;
             gap: var(--gap-l);
             width: 80%;
-            margin: 2% 0 2% 0;
-            bac
+            margin: 4% 2% 3% 2%;
+            color:  #9F9F9F;
         }
+        &-img{
+            display: flex;
+            gap: var(--gap-xl);
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    &__product{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: var(--gap-xxl);
+            justify-content: center;
+            width: 98%;
+            &__title{
+                font-weight: 500;
+                font-size: 2.25rem;
+                background-color: (--main-nav-text);
+            }
+            &-cards{
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: var(--gap-xl);
+            }        
     }
 }
 .tabs-active{
