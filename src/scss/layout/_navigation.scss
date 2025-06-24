@@ -11,7 +11,7 @@
         display: flex;
         width: 40%;
         justify-content: space-between;
-        gap: var(--gap-xl);
+        gap: 20px;
         list-style: none;
     }
     &__icons{
@@ -24,12 +24,17 @@
 }
 .cart-container {
             position: fixed;
+            overflow: hidden;
             top: 0px;
-            min-width: 200px;
+            min-width: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 35px;
             right: -600px; /* Скрыто за пределами экрана */
             width: 29%;
             background-color: white;
-            padding: var(--padding-bloc);
+            padding: var(--padding-block);
             z-index: 999;
             transition: right 0.3s ease-out;
             max-height: 80vh;
@@ -46,15 +51,30 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #eee;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
             &__cart-header{
               font-weight: 600;
               font-size: 1.5rem;
             }
         }
-        
+        .cart-items{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60vh;
+        &__footer{
+          display: flex;
+          gap: 30%;
+          &-title{
+            font-weight: 400;
+            font-size: 16px;
+          }
+          &-count{
+            font-weight: 600;
+            font-size: 1rem;
+            color: #B88E2F;
+          }
+        }
+      }
         .close-cart {
             background: none;
             border: none;
@@ -62,8 +82,23 @@
             cursor: pointer;
             color: #777;
         }
-        
-
+  .line-cart-short{
+    width: 70%;
+    height: 1px;
+    margin-top: -20px;
+    background-color: #D9D9D9;
+  }
+  .line-long{
+    width: 120%;
+    margin-left: -20px;
+    height: 1px;
+    background-color:  #D9D9D9;
+  }
+.cart-buttons{
+  display: flex;
+  gap: var(--gap-l);
+  font-size: 1rem;
+}
 @media screen and (min-width: 1600px) {
   .navigation{
     font-size: 1.5rem;

@@ -1,0 +1,46 @@
+@use 'utils/variables';
+.cart-item{
+    display: flex;
+    align-items: center;
+    // justify-content: space-between;
+    // width: 100%;
+    gap: var(--gap-xl);
+    &__title{
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 100%;
+        letter-spacing: 0%;
+    }
+    &__desc{
+        display: flex;
+        align-items: center;
+        gap: var(--gap-l);
+        min-width: 127px;
+        &-count{
+            font-weight: 300;
+            font-size: 1rem;
+        }
+        &-symbol{
+            font-weight: 300;
+            font-size: 0.75rem;
+        }
+        &-price{
+            font-weight: 300;
+            font-size: 0.75rem;
+            color: #B88E2F;
+
+        }
+    }
+}
+.cart-text{
+    display: flex;
+    width: 90%;
+    // margin: 0% 15% 0 3%;
+    justify-content: flex-start;
+    flex-direction: column;
+    // gap: var(--gap-l);
+}
+.svg{
+    min-width: 20px;
+    height: 20px;
+}

@@ -31,9 +31,42 @@
 
   
               </button>
-          </div>
+            </div>
+            <div class="line-cart-short"></div>
           <div class="cart-items" id="cartItems">
-              <!-- Товары будут добавляться сюда -->
+              <div class="cart-items__content">
+                    @@include('../components/_cart-item.html', {
+                        "img":"/assets/cart-sofa",
+                        "title":"Asgaard sofa",
+                        "price": "Rs. 250,000.00"
+                     })
+                     @@include('../components/_cart-item.html', {
+                        "img":"/assets/cart-sofa1",
+                        "title":"Casaliving Wood",
+                        "price": "Rs. 270,000.00"
+                     })
+              </div>
+              <div class="cart-items__footer">
+                <div class="cart-items__footer-title">Subtotal</div>
+                <div class="cart-items__footer-count">Rs. 520,000.00</div>
+              </div>
+          </div>
+          <div class="line-long"></div>
+          <div class="cart-buttons">
+             @@include('../components/_btn-card.html',{
+                    "title":"Cart";
+                    "size": "1rem";
+                })
+                 @@include('../components/_btn-card.html',{
+                    "title":"Checkout";
+                    "size": "1rem";
+ 
+                })
+                 @@include('../components/_btn-card.html',{
+                    "title":"Comparison";
+                    "size": "1rem";
+  
+                })
           </div>
       </div>
 </nav>
