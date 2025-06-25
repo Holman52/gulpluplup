@@ -1,0 +1,190 @@
+@use 'utils/variables';
+
+.content{
+    width: 100%;
+    margin-top: 3%;
+    &__block{
+        width: 100%;
+        display: inline-flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: var(--gap-xl);
+        
+
+        &__forms{
+            
+
+            &__title{
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 100%;
+                letter-spacing: 0%;
+            }
+
+            &__forms{
+                font-weight: 500;
+                font-size: 1rem;
+                line-height: 100%;
+                letter-spacing: 0%;
+
+                &__name{
+                    display: flex;
+                    align-items: center;
+                    gap: var(--gap-xl);
+                    width: 100%;
+
+                    &-flex{
+                        display: flex;
+                        justify-content: flex-start;
+                        flex-direction: column;
+                        gap: 5px;
+                        width: 100%;
+                       
+                    }
+                }
+            }
+        }
+
+        &__product{
+            margin-top: 2%;
+            width: 27%;
+            min-width: 192px;
+            &__final-cost{
+                display: flex;
+                flex-direction: column;
+
+                &__title, &__cost-count, &__cost-subtotal, &__cost-total{
+                    padding-top: 4%;
+                    display: inline-flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                &__title{
+                    font-weight: 500;
+                    font-size: 1.5rem;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+
+                }
+
+                &__cost-count{
+                    font-weight: 400;
+                    font-size: 1rem;
+                  
+                }
+                
+                &__cost-subtotal, .cost-total-edit{
+                    color: black;
+                }
+
+
+                &__cost-total{
+                    padding-bottom: 5%;
+
+                    .cost-total-price{
+                        font-weight: 700;
+                        font-size: 1.5rem;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                        color: #B88E2F;
+
+                    }
+                }
+
+                &__line{
+                    width: 100%;
+                    height: 1px;
+                    background-color: #D9D9D9;
+                }
+
+                &__active-input-text{
+                    font-weight: 300;
+                    font-size: 1rem;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: justify;
+                    color: #9F9F9F;
+                }
+
+                &__footer-text{
+                    font-weight: 300;
+                    font-size: 16px;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    text-align: justify;
+
+                    .footer-text-span{
+                        font-weight: 600;
+                    }
+                }
+
+                &__footer-btn{
+                    text-align: center;
+                    padding-top: 5%;
+
+                    &__btn{
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+    
+                        width: 60%;
+                        height: 64px;
+                        background-color: transparent;
+                        border: 1px solid black;
+                        border-radius: 15px;
+                    }
+                }
+
+                &__active-input-text, &__footer-text{
+                    padding-top: 5%;
+                    font-size: 1rem;
+
+                }
+
+                .footer-input-edit{
+                    padding-top: 5%;
+                }
+
+
+            }
+        }
+    }
+}
+.name-form{
+    border-radius: 10px;
+    border: 1px solid #9F9F9F;
+    height: 75px;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #9F9F9F;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: var(--padding-block);
+}
+.grey{
+    color: #9F9F9F;
+}
+.black{
+    color: black;
+}
+@media screen and (max-width:768px) {
+    label{
+        font-size: 13px;
+    }
+    .content__block__product__final-cost__footer-text{
+        font-size: 13px;
+    }
+    .btn-card{
+        font-size: 13px;
+    }
+    select{
+      font-size: 13px; 
+    }
+    button{
+      font-size: 13px; 
+    }
+}

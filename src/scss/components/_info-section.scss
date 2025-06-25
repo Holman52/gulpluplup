@@ -1,0 +1,44 @@
+@use 'utils/variables';
+
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.radio-circle {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #999; 
+  transition: all 0.2s ease;
+}
+
+.radio-text {
+  color: #999; 
+  transition: all 0.2s ease;
+}
+
+
+.radio-option input:checked + .radio-circle {
+  border-color: #000; 
+  background-color: #000; 
+}
+
+.radio-option input:checked ~ .radio-text {
+  color: #000; 
+}
+
+
+.radio-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}

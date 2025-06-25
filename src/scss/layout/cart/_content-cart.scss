@@ -1,0 +1,147 @@
+@use 'utils/variables';
+
+
+.content{
+    width: 100%;
+    margin: 5% 0 5%;
+
+    &__block{
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap-xl);
+        justify-content: center;
+        &__cart-totals{
+            background-color: #F9F1E7;
+            padding: 2% 5% 5% 5%;
+
+            &__text{
+
+                font-weight: 600;
+                font-size: 2rem;
+                line-height: 100%;
+                letter-spacing: 0%;
+
+                &-title{
+                    text-align: center;
+                    padding-bottom: 25%;
+                }
+
+                &-sum{
+                    padding-bottom: 15%;
+
+                    font-weight: 500;
+                    font-size: 1rem;
+                    display: flex;
+                    flex-direction: column;
+
+                    &__subtotal{
+                        display: inline-flex;
+                        gap: 60px;
+                        .subtotal{
+                            font-weight: 400;
+                            color: #9F9F9F;
+                        }
+                    }
+
+                    &__total{
+                        padding-top: 5%;
+                        display: inline-flex;
+                        gap: 60px;
+                        .ttotal{
+                            font-weight: 500;
+                            font-size: 20px;
+                            line-height: 100%;
+                            color: #B88E2F;
+                        }
+                    }
+                }
+
+                &-button{
+                    text-align: center;
+
+                    &__b{
+                        width: 90%;
+                        height: 5vh;
+                        border-radius: 15px;
+                        border: 1px solid black;
+                        background-color: transparent;
+
+                        font-weight: 400;
+                        font-size: 20px;
+                        line-height: 100%;
+                        letter-spacing: 0%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+table{
+    border-collapse: collapse;
+
+}
+
+.thead{
+    background-color: #F9F1E7;
+}
+.th, .th-body{
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: left;
+    padding: 4% 0 4%;
+    width: 150px;
+
+    &__itog{
+        text-align: left;
+
+    }
+    &__delete{
+        text-align: left;
+    }
+}
+
+.th-body{
+    color: #9F9F9F;
+}
+
+.th-edit-title{
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-align: left;
+    padding: 4%;
+    border-right: 2px solid #E8E8E8;
+}
+
+.count-th{
+    display: flex;
+    width: 32px;
+    height: 32px;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid #9F9F9F;
+    justify-content: center;
+    align-items: center;
+   
+}
+@media screen and (min-width:1440px){
+    .th, .th-body{
+        font-size: 20px;
+    }
+}
+@media screen and (max-width:576px){
+    .th, .th-body{
+        font-size: 10px;
+        &__itog{
+            font-size: 10px;
+        }
+    }
+    img{
+        width: 80px;
+    }
+    .subtotal{
+        font-size: 16px;
+    }
+}

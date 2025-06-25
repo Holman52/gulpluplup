@@ -1,0 +1,122 @@
+        <section class="content">
+            <div class="content__block">
+                <div class="content__block__forms">
+                    <div class="content__block__forms__title">
+                        <p>Billing details</p>
+                    </div>
+                    <form action="" class="content__block__forms__forms">
+                        <div class="content__block__forms__forms__name">
+                            <div class="content__block__forms__forms__name-flex">
+                                <label for="FirstName">First Name</label>
+                                <input type="text" id="FirstName" class="name-form" />
+                            </div>
+
+                            <div class="content__block__forms__forms__name-flex">
+                                <label for="LastName">Last Name</label>
+                                <input type="text" id="LastName"  class="name-form" />
+                            </div>
+                            
+                        </div>
+
+                        @@include('./_input-check.html', {
+                        "label" : "Company Name (Optional)",
+                        "place" : ""
+                        })
+                        
+                        @@include('./_select-check.html', {
+                        "label" : "Country / Region", 
+                        "option" : "Sri Lanka"
+                        })
+
+                        @@include('./_input-check.html', {
+                        "label" : "Street address",
+                        "place" : ""
+                        })
+
+                        @@include('./_input-check.html', {
+                        "label" : "Town / City",
+                        "place" : ""
+                        })
+
+                        @@include('./_select-check.html', {
+                        "label" : "Province", 
+                        "option" : "Western Province"
+                        })
+
+                        @@include('./_input-check.html', {
+                        "label" : "ZIP code",
+                        "place" : ""
+                        })
+
+                        @@include('./_input-check.html', {
+                        "label" : "Phone",
+                        "place" : ""
+                        })
+
+                        @@include('./_input-check.html', {
+                        "label" : "Email address",
+                        "place" : ""
+                        })
+
+                        @@include('./_input-check.html', {
+                        "label" : "",
+                        "place" : "Additional information"
+                        })
+                    </form>
+                </div>
+                <div class="content__block__product">
+                    <div class="content__block__product__final-cost">
+                        <div class="content__block__product__final-cost__title">
+                            <div>Product</div>
+                            <div>Subtotal</div>
+                        </div>
+                        <div class="content__block__product__final-cost__cost-count">
+                            <div class="grey">Asgaard sofa <span class="black">x 1</span></div>
+                            <div>Rs. 250,000.00</div>
+                        </div>
+                        <div class="content__block__product__final-cost__cost-subtotal">
+                            <div>Subtotal</div>
+                            <div>Rs. 250,000.00</div>
+                        </div>
+                        <div class="content__block__product__final-cost__cost-total">
+                            <div class="cost-total-edit">Total</div>
+                            <div class="cost-total-price">Rs. 250,000.00</div>
+                        </div>
+                        <div class="content__block__product__final-cost__line"></div>
+                        
+                        <div class="footer-input-edit">
+                            @@include('./checkout/_info-section.html', {
+                            "label" : "Direct Bank Transfer"
+                            })
+                        </div>
+
+                        <div class="content__block__product__final-cost__footer-text grey">
+                            Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                        </div>
+
+                        <div class="footer-input-edit">
+                            @@include('./checkout/_info-section.html', {
+                            "label" : "Direct Bank Transfer"
+                            })
+                        </div>
+
+                        <div class="footer-input-edit">
+                            @@include('./checkout/_info-section.html', {
+                            "label" : "Cash On Delivery"
+                            })
+                        </div>
+
+                        <div class="content__block__product__final-cost__footer-text">
+                            Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <span class="footer-text-span">privacy policy.</span>
+                        </div>
+
+                        <div class="content__block__product__final-cost__footer-btn">
+                              @@include('../components/_btn-card.html',{
+                                "title":"Place order",
+                                "size": "1rem"
+                            })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
