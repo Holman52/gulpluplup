@@ -14,6 +14,7 @@
 @use 'components/btn-card';
 @use 'components/button';
 @use 'layout/cart/content-cart';
+@use 'components/cart-item';
 
 body {
   background-color: var(--main-color);

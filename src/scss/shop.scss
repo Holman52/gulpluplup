@@ -17,6 +17,8 @@
 @use 'components/card';
 @use 'components/nav-btn-item';
 @use 'components/button';
+@use 'components/cart-item';
+@use 'components/btn-card';
 
 body {
   background-color: var(--main-color);
