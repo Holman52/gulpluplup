@@ -12,6 +12,10 @@
     align-items: center;
     gap: var(--gap-l);
     padding: 5% 0 5% 0;
+    &-logo{
+        object-fit: contain;
+        margin-bottom: -15px;
+    }
     &__text{
         font-weight: 500;
         font-size: 3rem;

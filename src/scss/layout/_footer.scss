@@ -15,6 +15,7 @@
         display: flex;
         justify-content: space-between;
         gap: var(--gap-xl);
+        flex-wrap: wrap;
         &-block{
             display: flex;
             flex-direction: column;

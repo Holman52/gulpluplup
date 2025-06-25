@@ -9,13 +9,15 @@
 // ==== 3. Layout ====
 @use 'layout/navigation';
 @use 'layout/footer';
+@use 'layout/header';
 @use 'layout/best-footer';
-@use 'layout/product/content-product';
+@use 'layout/cop/content-cop';
 
 @use 'components/card';
 @use 'components/path-card';
 @use 'components/btn-card';
 @use 'components/button';
+@use 'components/product-comparison';
 @use 'components/cart-item';
 
 body {

@@ -1,0 +1,45 @@
+@use 'utils/variables';
+
+.product-comp{
+    &__img{
+        object-fit: contain;
+    }
+    &__title{
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 126%;
+        letter-spacing: 0%;
+        
+    }
+
+    &__price{
+        font-size: 1.125rem;
+        font-weight: 500;
+        line-height: 126%;
+        letter-spacing: 0%;
+    }
+
+    &__rating{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        &__int, &__reviews{
+            font-weight: 500;
+            font-size: 1.125rem;
+            line-height: 100%;
+            letter-spacing: 0%; 
+        }
+        &__reviews{
+            color: #9F9F9F;
+            font-size: 0.8125rem;
+        }
+    }
+}
+@media screen and (max-width:1200px) {
+    .product-comp__img1{
+        height: 12px;
+        width: 70px;
+    }
+    
+}
