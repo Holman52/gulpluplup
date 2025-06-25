@@ -3,19 +3,15 @@
     // padding: var(--padding-block)
     // min-width: 180px;
     font-size: 1.2rem;
-    padding: 4% 5% 4% 5%;
+    padding: var(--padding-block);
     background-color: transparent;
     border: 1px solid black;
     border-radius: 15px;
     font-weight: 400;
 }
-@media screen and (min-width:769px) and (max-width:1100px){
+@media screen and (max-width:1100px){
     .btn-card{
-        padding: 3%;
+        padding: var(--padding-inline);
     }
 }
-@media screen and (max-width:768px) {
-    .btn-card{
-        padding: 4%;
-    }
-}
+
