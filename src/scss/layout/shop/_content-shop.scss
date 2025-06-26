@@ -5,6 +5,7 @@
     background: #FAF3EA;
     padding: 2%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     gap: var(-gap-l);
@@ -67,5 +68,11 @@
         gap: var(--gap-xl);
         flex-wrap: wrap;
         margin-top: 5%;
+    }
+}
+@media screen and (max-width:890) {
+    .contentShop{
+        justify-content: center;
+        align-items: center;
     }
 }

@@ -6,6 +6,7 @@
     gap: var(--gap-l);
 
     .name-form{
+
         border-radius: 10px;
         border: 1px solid #9F9F9F;
         height: 75px;
@@ -38,5 +39,10 @@
         padding-left: var(--padding-block);
 
         
+    }
+}
+@media screen and (max-width:768px) {
+    .checkout-input__input{
+        font-size: 14px;
     }
 }

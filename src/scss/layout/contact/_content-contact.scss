@@ -1,0 +1,56 @@
+.content{
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    &__desc{
+        width: 50%;
+        &-title{
+            font-weight: 600;
+            font-size: 2.25rem;
+            line-height: 100%;
+            text-align: center;
+            letter-spacing: 0%;
+
+        }
+        &-header{
+            margin-top: 15px;
+            color: #9F9F9F;
+            font-weight: 400;
+            font-size: 1rem;
+            text-align: center;
+        }
+    }
+    &__block{
+        width: 100%;
+        display: flex;
+        margin-top: 6%;
+        flex-wrap: wrap;
+        gap: var(--gap-xl);
+        justify-content: center;
+        &-info{
+            display: inline-flex;
+            gap: var(--gap-l);
+            min-width: 210px;
+            &__text-title{
+                font-weight: 500;
+                font-size: 1.5rem;
+                line-height: 100%;
+                letter-spacing: 0%;
+
+            }
+        }
+        &-inputs{
+            width: 30%;
+            min-width: 200px;
+        }
+    }
+}
+  .flex{
+            gap: var(--gap-xl);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }

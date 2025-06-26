@@ -18,6 +18,7 @@
     }
       .block-desk{
             width: 35%;
+            min-width: 215px;
             background-color: #FFF3E3;
             display: flex;
             flex-direction: column;
@@ -148,6 +149,7 @@
         justify-content: flex-end;
         align-items: center;
         &-desc{
+            min-width: 250px;
             display: flex;
             justify-content: flex-start;
             gap: var(--gap-l);
@@ -308,7 +310,7 @@
         &-scroll{
             display: grid;
             width: 100%;
-    
+        
             grid-template-columns: 25% auto auto auto auto;
             grid-template-rows: repeat(2, 1fr);
             align-items: center;
@@ -388,4 +390,21 @@
   .content__rooms-scroll{
     width: 600px;
   }
+}
+@media screen and (max-width: 900px) {
+    .content__rooms-scroll{
+        display: none;
+    }
+    .content__rooms-desc{
+        width: 60%;
+        padding: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    .content__rooms-desc__title{
+            text-align: center;
+    }
+    .content__rooms-desc__text{
+            text-align: center;
+    }
 }
